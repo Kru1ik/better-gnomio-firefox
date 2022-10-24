@@ -1,0 +1,63 @@
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Better Gnomio</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>Better Gnomio</h1>
+        <div class="menu">
+            <a href="database/database.html">Baza danych</a>
+            <a href="options/options.html">Opcje</a>
+            <a href="info/info.html">Info</a>
+        </div>
+
+        <h3>Szukaj w bazie danych</h3>
+        <input id="search" type="text" autocomplete="off">
+        <div class="desc">Pamiętaj że możesz również szukać w lewym-dolnym rogu ekranu</div>
+        <div class="desc">Pamiętaj że szukając odpowiedzi na pytanie z obrazem <strong>musisz</strong> szukać nazwę obrazu</div>
+        <div class="bigcontent" id="results"></div>
+
+        <div id="hideonsearch">
+            <h3>Domyślne funkcje</h3>
+            <table class="table">
+                <tr>
+                    <th>Objekt</th>
+                    <th>Po najechaniu</th>
+                    <th>Po kliknięciu</th>
+                </tr>
+                <!-- <tr>
+                    <td>#</td>
+                    <td>Odsyła do wyszukania treści w google</td>
+                </tr>
+                <tr>
+                    <td>$</td>
+                    <td>Odsyła do wyszukania obrazu w google (czasem może nie działać)  <a style="color: red;">aktualnie nie działa poprawnie</a></td>
+                </tr> -->
+                <tr>
+                    <td><i>tekst</i></td>
+                    <td>Wyświetla odpowiedź z bazy danych</td>
+                    <td>Wyszukuje w nowej karcie</td>
+                </tr>
+                <tr>
+                    <td><i>obrazy</i></td>
+                    <td>Wyświetla się jego link (w razie jak by obraz był podpisany [np. switch.png])</td>
+                    <td>Wyszukuje w nowej karcie (puki co nie działa)</td>
+                </tr>
+                <tr>
+                    <td><i>lewy-donly róg ekranu</i></td>
+                    <td>-</td>
+                    <td>Umożliwia w miarę dyskretne przeszukiwanie bazy danych</td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        <!-- <div>Problem z wczytaniem? kliknij przycisk poniżej aby wczytać ręcznie</div>
+        <button id="main">Wczytaj</button>
+        <a href="o.html">o</a>
+        <div style="color: rgb(145, 0, 0);"> Uwaga!, skrypt aktywuje się po wczytaniu strony (tak jak każdy skrypt), zalecane jest poczekanie na wczytanie strony.</div> -->
+
+        <script src="index.js"></script>
+    </body>
+</html>
