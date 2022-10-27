@@ -46,5 +46,4 @@ document.getElementById('zaznaczajodpowiedzi').onclick = () => changeButton('zaz
 
 
 
-
-displayOptions()
+displayOptions();

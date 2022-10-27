@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Better Gnomio",
-  "version": "0.3",
+  "name": "zs2ti Better Gnomio",
+  "version": "0.4",
 
   "description": "zs2ti gnomio add-on",
 
@@ -9,14 +9,27 @@
       "128": "icons/bg128.png"
   },
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "zs2ti-better-gnomio@kru1ik",
+      "strict_min_version": "57.0"
+    }
+  },
+
+  "background": {
+    "scripts": [
+      "background/pre.js"
+    ]
+  },
+
   "content_scripts": [
     {
       "matches": [
-          "*://zs2ti.gnomio.com/*",
-          "file:///*"
+          "*://zs2ti.gnomio.com/*"
       ],
       "js": [
-          "lib/jquery.min.js",
+          "lib/jquery-3.6.1.min.js",
+          
           "content-scripts/pre.js",
           "content-scripts/main.js",
           "content-scripts/database.js",

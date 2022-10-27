@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <h1>Better Gnomio</h1>
+        <h1><span style="font-size: medium;">zs2ti </span>Better Gnomio</h1>
         <div class="menu">
             <a href="database/database.html">Baza danych</a>
             <a href="options/options.html">Opcje</a>
@@ -20,20 +20,13 @@
 
         <div id="hideonsearch">
             <h3>Domyślne funkcje</h3>
+            <div class="desc">Kliknij wybrany objekt aby podświetlić go</div>
             <table class="table">
                 <tr>
                     <th>Objekt</th>
                     <th>Po najechaniu</th>
                     <th>Po kliknięciu</th>
                 </tr>
-                <!-- <tr>
-                    <td>#</td>
-                    <td>Odsyła do wyszukania treści w google</td>
-                </tr>
-                <tr>
-                    <td>$</td>
-                    <td>Odsyła do wyszukania obrazu w google (czasem może nie działać)  <a style="color: red;">aktualnie nie działa poprawnie</a></td>
-                </tr> -->
                 <tr>
                     <td><i>tekst</i></td>
                     <td>Wyświetla odpowiedź z bazy danych</td>
@@ -45,9 +38,9 @@
                     <td>Wyszukuje w nowej karcie (puki co nie działa)</td>
                 </tr>
                 <tr>
-                    <td><i>lewy-donly róg ekranu</i></td>
+                    <td><i id="hgSearchBar" style="text-decoration: underline; cursor: pointer">lewy-dolny róg ekranu</i></td>
                     <td>-</td>
-                    <td>Umożliwia w miarę dyskretne przeszukiwanie bazy danych</td>
+                    <td>Umożliwia przeszukiwanie bazy danych</td>
                 </tr>
             </table>
         </div>

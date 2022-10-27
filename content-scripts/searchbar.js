@@ -27,7 +27,7 @@ $(function () {
         </div>
     `);
 
-    document.getElementById('bg-search').addEventListener('input', function () {
+    $('#bg-search').on('input', function () {
         var search = this.value;
         if(search != '') {
             chrome.storage.local.get(function(element) {
@@ -40,10 +40,10 @@ $(function () {
                         results = '<ul><li><b>' + key + '</b></li><li>' + value + '</li><br></ul>' + results;
                     }
                 }
-                document.getElementById('bg-results').innerHTML = results;
+                $('#bg-results').html(results);
             })
         } else {
-            document.getElementById('bg-results').innerHTML = '';
+            $('#bg-results').html('');
         }
     });
 

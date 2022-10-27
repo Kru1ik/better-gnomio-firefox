@@ -30,7 +30,7 @@ $(function() {
             //* Czy zawiera obraz
             var img = x.find('img');
             if(img.length) {
-                var name = img.first().attr('src').split('/');
+                var name = img.first().attr('src').split('/'); //! Ostrzeżenie: Due to both security and performance concerns, this may not be set using dynamic values which have not been adequately sanitized. This can lead to security issues or fairly serious performance degradation.
                 var name = name.splice(-2, 2).join('/').toString();
                 if(obj[name] !== undefined) {
                     answer = obj[name];
@@ -65,13 +65,16 @@ $(function() {
     
                             // fix text before equal check
                             var text = fixText($(k).text());
+
+                            //* Igi kod
+                            // usuwa jeśli na początku odpowiedzi jest "a) <odpowiedź>" lub "a. <odpowiedź>"
+                            text = text.replace(/^[a-zA-Z0-9][).][\s]*/, "")
     
                             //* input
                             if(input.length) {
                                 // radio
                                 if(input.attr('type') == 'radio') {
-                                    //! include
-                                    if(text.includes(subAnswer)) {
+                                    if(text == subAnswer) {
                                         input.click()
                                     } 
                                 }
@@ -80,7 +83,6 @@ $(function() {
                                 if(input.attr('type') == 'checkbox') {
                                     var answerList = subAnswer.split(', ');
                                     for(var element of answerList) {
-                                        //! nie może być include bo zaznacza za dużo
                                         if(text == element) {
                                             input.click()
                                         } 
