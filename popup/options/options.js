@@ -2,21 +2,12 @@
 
 function displayOptions() {
     chrome.storage.local.get(function(element) {
-        if(element['options'] === undefined) {
-            chrome.storage.local.set({'options':{
-                'wyswietlajnastronie':'0',
-                'zaznaczajodpowiedzi':'0'
-            }})
-        }
-    })
-
-    chrome.storage.local.get(function(element) {
         for(var [key, value] of Object.entries(element['options'])) {
             var wyswietl = document.getElementById(key);
             if(value == '0') {
-                wyswietl.innerText = 'false';
+                wyswietl.checked = false;
             } else {
-                wyswietl.innerText = 'true';
+                wyswietl.checked = true;
             }
         }
     })

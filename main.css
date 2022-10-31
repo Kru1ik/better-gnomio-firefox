@@ -1,0 +1,109 @@
+* {
+    --ktuliq1: rgb(95, 96, 140);
+    --ktuliq2: rgb(45, 48, 79);
+    --ktuliq3: rgb(245, 230, 223);
+    --dark: rgb(16, 16, 24);
+
+    background-color: var(--ktuliq2);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    overflow: hidden;
+
+    margin: 0px;
+    padding: 16px;
+
+    /* height: 200px;  */
+    max-width: 400px;
+    min-width: 300px;
+    border: solid 2px var(--ktuliq3);
+}
+a {text-decoration: none;}
+h1 {margin: 0px 0px 8px 0px}
+h3 {margin: 8px 0px 8px 0px}
+ul {padding-left: 16px}
+
+
+
+
+/* Menu */
+.menu {
+    display: flex;
+}
+
+
+/* Button */
+.button,
+.button *{
+    border: none;
+    background-color: var(--ktuliq1);
+    transition: 0.3s;
+    outline: solid 1px transparent;
+}
+.button {
+    font-size: medium;
+    margin: 8px 8px 8px 0px;
+    padding: 4px;
+    border-left: solid 4px var(--ktuliq3);
+}
+
+.button:hover,
+.button:hover * {
+    background-color: var(--ktuliq2);
+}
+
+.button:hover {
+    outline: solid 1px var(--ktuliq3);
+}
+
+
+
+
+/* Switch*/
+.switch {
+    display: inline-block;
+    width: 0px;
+    margin-right: 32px;
+}
+.switch span {
+    display: inline-block;
+    border: none;
+    background-color: var(--ktuliq2);
+    transition: 0.3s;
+    outline: solid 1px var(--ktuliq1);
+    margin: 8px 8px 8px 0px;
+
+    border-left: solid 0px var(--ktuliq1);
+    border-right: solid 16px var(--ktuliq1);
+
+    height: 16px;
+    width: 16px;
+}
+
+.switch input:checked + span {
+    border-left: solid 16px var(--ktuliq1);
+    border-right: solid 0px var(--ktuliq1);
+}
+
+.switch:hover span {
+    outline: solid 1px var(--ktuliq3);
+}
+
+
+
+/* description */
+.desc {
+    font-size: small;
+    color: grey;
+}
+
+
+
+/* other */
+table,
+table td {
+    border-spacing: 0px;
+    border: solid 1px var(--ktuliq1);
+}
+table td {padding: 4px;}

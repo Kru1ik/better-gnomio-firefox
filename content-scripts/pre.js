@@ -23,7 +23,7 @@ fixLocalStorage();
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    if(sender.id == 'better-gnomio@kru1ik') {
+    if(sender.id == 'zs2ti-bg@Kru1ik') {
 
       if(request['highlight'] == 'searchbar' ) {
         $('#bg-search').css('background-color', 'red');

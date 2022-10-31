@@ -32,10 +32,26 @@ function sendMessage(object) {
 
 
 
+
+
+
+//* przyciski
+document.querySelectorAll('a[target=_blank]').forEach(function(value) {
+    // musi być opóźnienie bo inaczej otwiera w nowym oknie przeglądarki
+    value.onclick = function() {setTimeout(function() {window.close()}, 10)}
+})
+
+
+//* ilość danych
+chrome.storage.local.get(function(value) {
+    document.getElementById('length').appendChild(document.createTextNode(Object.keys(value['data']).length))
+})
+
+//* search bar
 document.getElementById('search').addEventListener('input', function () {
     var search = this.value.toLowerCase();
     if(search != '') {
-        document.getElementById('hideonsearch').setAttribute('style', 'display: none;');
+        // document.getElementById('hideonsearch').setAttribute('style', 'display: none;');
         chrome.storage.local.get(function(element) {
             var results = document.getElementById('results');
             results.innerHTML = '';
@@ -56,26 +72,10 @@ document.getElementById('search').addEventListener('input', function () {
             // document.getElementById('results').innerHTML = results; //! Ostrzeżenie: Due to both security and performance concerns, this may not be set using dynamic values which have not been adequately sanitized. This can lead to security issues or fairly serious performance degradation.
         })
     } else {
-        document.getElementById('hideonsearch').removeAttribute('style');
+        // document.getElementById('hideonsearch').removeAttribute('style');
         document.getElementById('results').innerHTML = '';
     }
 });
 
-
+//* podświetl ukryty pasek wyszukiwania
 document.getElementById('hgSearchBar').onclick = function () {sendMessage({highlight: 'searchbar'})}
-
-
-
-
-
-
-
-
-
-
-
-
-const sendMessageId = document.getElementById("main");
-sendMessageId.onclick = function() {
-    
-};

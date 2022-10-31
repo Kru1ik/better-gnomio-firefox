@@ -1,6 +1,6 @@
 $(function () {
     $('html').first().append(`
-        <div style="position: fixed; left: 0; bottom: 0;">
+        <div style="position: fixed; left: 0; bottom: 0; z-index: 2137">
 
             <style>
                 #bg-search {

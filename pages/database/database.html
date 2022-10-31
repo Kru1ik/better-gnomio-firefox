@@ -1,0 +1,52 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="../main.css">
+    <title>Database</title>
+</head>
+<body>
+    <header>
+        <h1>Baza danych</h1>
+    
+        <h3>Zarządzaj</h3>
+        <div class="manage">
+
+            <div class="manageItem">
+                <button class="button" id="copy">Kopiuj</button>
+                <button class="button" id="clear">Wyczyść</button>
+                <label for="importfile" class="button">
+                    <input type="file" id="importfile" style="display: none;" accept=".json" multiple>
+                    Importuj z plików
+                </label>
+                <span class="subManage">
+                    <input type="text" id="downloadfilename" placeholder="database">
+                    <button class="button" id="downloadfile">Zapisz jako plik</button>
+                </span>
+            </div>
+            <div class="manageItem">
+                <span class="subManage">
+                    <textarea id="importraw" name="importraw" style="height: 24px; width: 172px;"></textarea> <!-- cols="25" rows="1" -->
+                    <button class="button" id="importbutton">Importuj z tekstu</button>
+                </span>
+            </div>
+            <div class="desc">Importowane elementy dodają się do aktualnego zbioru</div>
+        
+            
+        </div>
+        <div>Ilość danych: <span id="length"></span></div>
+
+        
+    </header>
+    
+    <main>
+        <ol id="data"></ol>
+    </main>
+        
+
+
+    <script src="database.js"></script>
+</body>
+</html>

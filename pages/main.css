@@ -1,0 +1,62 @@
+html,
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+body {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: none;
+}
+header {
+    flex: 0 1 auto;
+    
+    margin: 16px;
+    
+}
+main {
+    flex: 1 1 auto;
+    overflow: scroll;
+
+    border-top: dashed 2px var(--ktuliq1);
+}
+
+.manage {
+    padding: 8px;
+    border-left: solid 4px var(--ktuliq3);
+    /* border-radius: 8px; */
+}
+.manageItem {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.subManage {
+    display: flex;
+    align-items: stretch;
+    padding: 0px;
+    border: solid 2px var(--ktuliq3);
+    margin: 8px 8px 8px 0px;
+    /* border-radius: 8px; */
+}
+.subManage input,
+.subManage textarea,
+.subManage input:focus,
+.subManage textarea:focus {
+    border: none;
+    outline: none;
+}
+.subManage .button {
+    margin: 0px;
+}
+
+
+
+.button {
+    font-size: small;
+}

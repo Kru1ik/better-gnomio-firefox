@@ -1,15 +1,16 @@
+<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../../main.css">
     <title>Opcje</title>
 </head>
 <body>
     <h1>Opcje</h1>
     <div class="menu">
-        <a href="../index.html">Powrót</a>
+        <a class="button" href="../index.html">Powrót</a>
     </div>
 
     <h3>Strona</h3>
@@ -17,17 +18,24 @@
         <tr>
             <td>
                 Wyświetlaj odpowiedź obok pytania
-                <img src="../../assets/zaznaczajodpowiedzi.png" alt="Zaznaczaj odpowiedzi (obraz)">
             </td>
-            <td><button id="wyswietlajnastronie"></button></td>
+            <td>
+                <label class="switch" for="wyswietlajnastronie">
+                    <input type="checkbox" style="display: none;" id="wyswietlajnastronie"></input>
+                    <span></span>
+                </label>
+            </td>
         </tr>
         <tr>
             <td>
                 Automatycznie zaznaczaj dobre odpowiedzi
-                <div class="desc">pozwala osiągać świetne czasy xd</div>
-                <img src="../../assets/autocompletexd.png" alt="12 sec. (obraz)">
             </td>
-            <td><button id="zaznaczajodpowiedzi"></button></td>
+            <td>
+                <label class="switch" for="zaznaczajodpowiedzi">
+                    <input type="checkbox" style="display: none;" id="zaznaczajodpowiedzi"></input>
+                    <span></span>
+                </label>
+            </td>
         </tr>
     </table>
     <div class="desc">Aby zobaczyć efekty musisz odświerzyć stronę</div>
