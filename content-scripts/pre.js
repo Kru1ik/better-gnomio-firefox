@@ -1,3 +1,11 @@
+
+var storageLocal = {}
+
+chrome.storage.local.get(function(element) {
+  obj = element['data'];
+  
+})
+
 function fixLocalStorage() {
   chrome.storage.local.get(function(element) {
     if(element['data'] === undefined) {

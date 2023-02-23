@@ -43,9 +43,13 @@ document.querySelectorAll('a[target=_blank]').forEach(function(value) {
 
 
 //* ilość danych
-chrome.storage.local.get(function(value) {
-    document.getElementById('length').appendChild(document.createTextNode(Object.keys(value['data']).length))
-})
+function displayDataCount() {
+    chrome.storage.local.get(function(value) {
+        document.getElementById('length').innerHTML = '';
+        document.getElementById('length').appendChild(document.createTextNode(Object.keys(value['data']).length))
+    })
+}
+displayDataCount();
 
 //* search bar
 document.getElementById('search').addEventListener('input', function () {
@@ -77,5 +81,29 @@ document.getElementById('search').addEventListener('input', function () {
     }
 });
 
-//* podświetl ukryty pasek wyszukiwania
-document.getElementById('hgSearchBar').onclick = function () {sendMessage({highlight: 'searchbar'})}
+// //* podświetl ukryty pasek wyszukiwania
+// document.getElementById('hgSearchBar').onclick = function () {sendMessage({highlight: 'searchbar'})}
+
+
+
+
+
+// * quickexport
+// kopia download z database.js
+document.getElementById('quickexport').onclick = function() {
+    // filename
+    var filename = 'database.json';
+
+    // download
+    chrome.storage.local.get(function (value) {
+        var blob = new Blob([JSON.stringify(value['data'])], {type: "text/plain;charset=utf-8"});
+        var url = URL.createObjectURL(blob);
+        chrome.downloads.download({url: url, filename: filename})
+    })
+}
+
+//* quickclear
+document.getElementById('quickclear').onclick = function() {
+    chrome.storage.local.set({'data':{}});
+    displayDataCount();
+}

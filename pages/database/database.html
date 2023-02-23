@@ -18,7 +18,7 @@
                 <button class="button" id="copy">Kopiuj</button>
                 <button class="button" id="clear">Wyczyść</button>
                 <label for="importfile" class="button">
-                    <input type="file" id="importfile" style="display: none;" accept=".json" multiple>
+                    <input type="file" id="importfile" style="display: none;" accept=".json, .txt" multiple>
                     Importuj z plików
                 </label>
                 <span class="subManage">
@@ -28,8 +28,9 @@
             </div>
             <div class="manageItem">
                 <span class="subManage">
-                    <textarea id="importraw" name="importraw" style="height: 24px; width: 172px;"></textarea> <!-- cols="25" rows="1" -->
+                    <textarea id="dataraw" name="dataraw" style="height: 24px; width: 172px;"></textarea> <!-- cols="25" rows="1" -->
                     <button class="button" id="importbutton">Importuj z tekstu</button>
+                    <button class="button" id="removebutton">Usuń wypisane</button>
                 </span>
             </div>
             <div class="desc">Importowane elementy dodają się do aktualnego zbioru</div>

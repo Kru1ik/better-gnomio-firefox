@@ -39,14 +39,14 @@ document.getElementById('clear').onclick = function () {
 
 document.getElementById('downloadfile').onclick = function() {
     // filename
-    var filename = document.getElementById('downloadfilename').value;
-    if(filename == '') { filename = 'database'}
+    var filename = 'database.json';
+    if(document.getElementById('downloadfilename').value != '') { filename = document.getElementById('downloadfilename').value + '.json'}
 
     // download
     chrome.storage.local.get(function (value) {
         var blob = new Blob([JSON.stringify(value['data'])], {type: "text/plain;charset=utf-8"});
         var url = URL.createObjectURL(blob);
-        chrome.downloads.download({url: url, filename: filename + '.json'})
+        chrome.downloads.download({url: url, filename: filename})
     })
 }
 
@@ -73,11 +73,28 @@ document.getElementById("importfile").onchange = function() {
     });
 }
 
+//* import raw
 document.getElementById('importbutton').onclick = function () {
-    var json = JSON.parse(document.getElementById('importraw').value);
+    var json = JSON.parse(document.getElementById('dataraw').value);
     if(typeof json === 'object') {
         chrome.storage.local.get(function (value) {
             var obj = Object.assign(value['data'], json)
+            chrome.storage.local.set({'data':obj});
+            displayDatabase();
+        });
+    }
+}
+//* remove raw
+document.getElementById('removebutton').onclick = function () {
+    var json = JSON.parse(document.getElementById('dataraw').value);
+    if(typeof json === 'object') {
+        chrome.storage.local.get(function (value) {
+            var obj = value['data'];
+            for(var element of Object.keys(json)) {
+                if(obj[element] !== undefined) {
+                    delete obj[element];
+                }
+            }
             chrome.storage.local.set({'data':obj});
             displayDatabase();
         });

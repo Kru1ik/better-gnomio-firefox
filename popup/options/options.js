@@ -33,6 +33,8 @@ function changeButton(id) {
 
 document.getElementById('wyswietlajnastronie').onclick = () => changeButton('wyswietlajnastronie');
 document.getElementById('zaznaczajodpowiedzi').onclick = () => changeButton('zaznaczajodpowiedzi');
+document.getElementById('uzywajduckduckgo').onclick = () => changeButton('uzywajduckduckgo');
+
 
 
 
