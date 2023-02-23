@@ -117,7 +117,7 @@ $(function() {
 
 
                     try {
-                        var duckLink = new URL('https://html.duckduckgo.com/html/?q=site:blogspot.com ' + x.text());
+                        var duckLink = new URL('https://html.duckduckgo.com/html/?q=site:blogspot.com egzamin ' + x.text());
 
                         chrome.runtime.sendMessage({contentScriptQuery: "getData", url: duckLink.toString()}, 
                             function (response) {
