@@ -107,3 +107,28 @@ document.getElementById('quickclear').onclick = function() {
     chrome.storage.local.set({'data':{}});
     displayDataCount();
 }
+
+
+
+
+
+
+
+
+
+document.getElementById('mongodownload').onclick = function() {  
+    chrome.runtime.sendMessage({
+        type: "find"
+    }, function(response) {
+        if(response != undefined && response != '') {
+          displayDataCount()
+        }
+      });
+}
+
+
+document.getElementById('mongosend').onclick = function() {
+    chrome.runtime.sendMessage({
+        type: "update",
+    })
+}

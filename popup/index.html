@@ -23,23 +23,30 @@
         </style>
     </head>
     <body>
+        <div id="head">
+            <h1><span style="font-size: medium;">zs2ti </span>Better Gnomio</h1>
+
+            <div class="menu">
+                <a class="button" href="../pages/database/database.html" target="_blank">Baza danych <img src="../assets/new_tab.png" width="16px"></a>
+                <a class="button" href="options/options.html">Opcje</a>
+                <a class="button" href="../pages/info/info.html" target="_blank">Info <img src="../assets/new_tab.png" width="16px"></a>
+            </div>
+            <h4>Szybkie menu</h4>
+            <div class="menu">
+                <a class="button" href="../pages/database/quick/quickimport.html" target="_blank">Import <img src="../assets/new_tab.png" width="16px"></a>
+                <a class="button" id="quickexport">Export</a>
+                <a class="button" id="quickclear">Clear</a>
+            </div>
+            <h4>MongoDB</h4>
+            <div class="menu">
+                <a class="button" id="mongodownload">Pobierz</a>
+                <a class="button" id="mongosend">Wyślij</a>
+            </div>
+
+            <div>Ilość danych: <span id="length"></span></div>
+            <input id="search" type="text" autocomplete="off" placeholder="Szukaj w bazie danych">
+        </div>
         
-        <h1><span style="font-size: medium;">zs2ti </span>Better Gnomio</h1>
-
-        <div class="menu">
-            <a class="button" href="../pages/database/database.html" target="_blank">Baza danych <img src="../assets/new_tab.png" width="16px"></a>
-            <a class="button" href="options/options.html">Opcje</a>
-            <a class="button" href="info/info.html">Info</a>
-        </div>
-        <h4>Szybkie menu</h4>
-        <div class="menu">
-            <a class="button" href="../pages/database/quick/quickimport.html" target="_blank">Import <img src="../assets/new_tab.png" width="16px"></a>
-            <a class="button" id="quickexport">Export</a>
-            <a class="button" id="quickclear">Clear</a>
-        </div>
-
-        <div>Ilość danych: <span id="length"></span></div>
-        <input id="search" type="text" autocomplete="off" placeholder="Szukaj w bazie danych">
         <div class="bigcontent" id="results"></div>
 
         <!-- <div id="hideonsearch">

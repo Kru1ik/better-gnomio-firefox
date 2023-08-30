@@ -8,13 +8,17 @@
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+html {
+    height: calc(100% - 36px);
+}
 body {
     overflow: hidden;
 
     margin: 0px;
     padding: 16px;
 
-    /* height: 200px;  */
+    height: 100%; 
     max-width: 400px;
     min-width: 300px;
     border: solid 2px var(--ktuliq3);
@@ -24,9 +28,6 @@ h1 {margin: 0px 0px 8px 0px}
 h3 {margin: 8px 0px 8px 0px}
 h4 {margin: 0px 0px 0px 0px;}
 ul {padding-left: 16px}
-
-
-
 
 /* Menu */
 .menu {
@@ -41,6 +42,7 @@ ul {padding-left: 16px}
     background-color: var(--ktuliq1);
     transition: 0.3s;
     outline: solid 1px transparent;
+    cursor: pointer;
 }
 .button {
     font-size: medium;
@@ -66,6 +68,7 @@ ul {padding-left: 16px}
     display: inline-block;
     width: 0px;
     margin-right: 32px;
+    cursor: pointer;
 }
 .switch span {
     display: inline-block;

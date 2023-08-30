@@ -7,3 +7,6 @@ Used urls:
 
 Used libs:
 https://code.jquery.com/jquery-3.6.1.min.js - jQuery
+
+# Important!
+- there's no api-key in /background/mongodb.js
